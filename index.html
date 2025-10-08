@@ -397,13 +397,10 @@
           });
       });
 
-      // WhatsApp paylaşım funksiyası
+      // WhatsApp paylaşım funksiyası - sadəcə mesaj göstərir, link yoxdur
       function shareWhatsApp() {
         const message = "Sevgi və diqqət paylaşıram ❤️\n👉 Səndə et ❤️";
-        const url = "https://trumpr.github.io/iane-yardim/";
-        const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(
-          message + "\n" + url
-        )}`;
+        const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, "_blank");
       }
     </script>
