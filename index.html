@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Birlikdə Yaxşılığa — İanə</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --accent: #5b8efc;
+        --bg: linear-gradient(
+          135deg,
+          rgba(225, 238, 255, 0.7),
+          rgba(255, 255, 255, 0.5)
+        );
+        --glass-bg: rgba(255, 255, 255, 0.4);
+        --border: rgba(255, 255, 255, 0.6);
+        --text-dark: #1f2937;
+        --text-muted: #4b5563;
+        --shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--bg);
+        color: var(--text-dark);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+      .container {
+        width: 100%;
+        max-width: 500px;
+        background: var(--glass-bg);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 24px;
+        backdrop-filter: blur(16px);
+        margin-bottom: 20px;
+      }
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .logo {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 10px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--accent), #9dbbff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 22px;
+      }
+      h1 {
+        font-size: 22px;
+        margin-bottom: 6px;
+      }
+      p.lead {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--text-dark);
+      }
+      .donors {
+        margin-bottom: 16px;
+        padding: 16px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: var(--shadow);
+        border: 1px solid var(--accent);
+        text-align: center;
+      }
+      .donors button {
+        margin: 0 auto;
+        display: block;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 12px;
+        background: var(--accent);
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        animation: pulse 2s ease-out infinite;
+      }
+      input {
+        width: 100%;
+        padding: 14px;
+        margin-top: 12px;
+        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.6);
+        font-size: 15px;
+      }
+      .amt-buttons,
+      .purpose-buttons {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .amt,
+      .purpose-btn {
+        flex: 1 1 45%;
+        padding: 14px;
+        text-align: center;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: 0.2s;
+        font-size: 15px;
+      }
+      .amt.active,
+      .amt:hover,
+      .purpose-btn.active,
+      .purpose-btn:hover {
+        background: linear-gradient(135deg, var(--accent), #9dbbff);
+        color: white;
+        border: none;
+      }
+      .btn {
+        margin-top: 16px;
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--accent), #9dbbff);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-size: 16px;
+        animation: pulse 2s ease-out infinite;
+      }
+      .whatsapp-btn {
+        background: linear-gradient(135deg, #25d366, #1ebe57);
+        margin-bottom: 20px;
+      }
+      .whatsapp-btn:hover {
+        background: linear-gradient(135deg, #1ebe57, #25d366);
+      }
+      footer {
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 13px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 400px) {
+        .amt,
+        .purpose-btn {
+          flex: 1 1 100%;
+        }
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+        }
+        50% {
+          transform: scale(1.05);
+          box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.3);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="donors">
+        <h3>Son İanə edənlər</h3>
+        <button onclick="window.location.href='5.html'">Hamısına bax</button>
+      </div>
+
+      <header>
+        <div class="logo">İA</div>
+        <h1>Birlikdə Ümid Ol!</h1>
+        <p class="lead">
+          Sizin ianəniz xəstələrə, qocalara, çöl heyvanlarına və kimsəsizlərə
+          həyat gətirir ❤️
+        </p>
+      </header>
+
+      <form id="donationForm">
+        <input
+          type="hidden"
+          name="access_key"
+          value="c729b137-5cfe-4074-ad33-e1cd5f8fc1bd"
+        />
+        <input type="hidden" name="subject" value="Yeni ianə" />
+        <input
+          type="hidden"
+          name="purpose"
+          id="purposeInput"
+          value="Ümumi dəstək"
+        />
+
+        <input
+          id="fullname"
+          type="text"
+          name="fullname"
+          placeholder="Ad və soyadınızı daxil edin"
+          required
+        />
+        <input
+          id="customAmount"
+          type="number"
+          name="amount"
+          placeholder="İstədiyiniz məbləği yazın (ən az 1 AZN)"
+          min="1"
+          required
+        />
+
+        <div class="amt-buttons">
+          <div class="amt" onclick="selectAmount(10,event)">10 AZN</div>
+          <div class="amt" onclick="selectAmount(25,event)">25 AZN</div>
+          <div class="amt" onclick="selectAmount(50,event)">50 AZN</div>
+          <div class="amt" onclick="selectAmount(100,event)">100 AZN</div>
+        </div>
+
+        <div class="purpose-buttons">
+          <div
+            class="purpose-btn"
+            onclick="selectPurpose('Xəstələrə yardım',event)"
+          >
+            Xəstələrə yardım
+          </div>
+          <div
+            class="purpose-btn"
+            onclick="selectPurpose('Qocalara dəstək',event)"
+          >
+            Qocalara dəstək
+          </div>
+          <div
+            class="purpose-btn"
+            onclick="selectPurpose('Çöl heyvanlarına yardım',event)"
+          >
+            Çöl heyvanlarına yardım
+          </div>
+          <div
+            class="purpose-btn"
+            onclick="selectPurpose('Kimsəsizlərə yardım',event)"
+          >
+            Kimsəsizlərə yardım
+          </div>
+          <div
+            class="purpose-btn"
+            onclick="selectPurpose('Ümumilikdə ehtiyacı olanlara dəstək',event)"
+          >
+            Ümumilikdə ehtiyacı olanlara dəstək
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Təsdiqlə</button>
+      </form>
+
+      <button class="btn whatsapp-btn" onclick="shareWhatsApp()">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+          style="width: 22px; height: 22px"
+        />
+        WhatsApp ilə paylaş
+      </button>
+    </div>
+
+    <!-- Emosional İanə Bloku (Tam Mobil) -->
+    <div
+      style="
+        padding: 24px;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        max-width: 100%;
+        margin: 0 auto;
+      "
+    >
+      <h2
+        style="
+          color: #1f2937;
+          font-size: 20px;
+          margin-bottom: 16px;
+          text-align: center;
+        "
+      >
+        Həyatlara Toxun
+      </h2>
+      <p style="margin-bottom: 16px; font-size: 16px">
+        <strong>Hər canlı diqqət və sevgi haqqındadır.</strong><br />Bu gün bir
+        xəstə dərman tapa bilmir, bir qoca təkdir, bir küçə heyvanı soyuqda
+        titrəyir və bir kimsəsiz insan bir çörək dilimi üçün gözləyir.
+      </p>
+      <p style="margin-bottom: 16px; font-size: 16px">
+        <strong>Sənin kiçik bir ianən — 10, 20 və ya 50 manat —</strong> onların
+        həyatını dəyişdirə bilər.
+      </p>
+      <ul style="margin: 8px 0 12px 20px; font-size: 16px">
+        <li>🏥 Xəstələr sağlamlıq və ümid qazanacaq</li>
+        <li>👵 Qocalar təbəssüm və diqqət hiss edəcək</li>
+        <li>🐾 Küçə heyvanları qorunacaq və sevgi görəcək</li>
+        <li>🤝 Kimsəsizlər insanlıq və dəstək hiss edəcək</li>
+      </ul>
+      <p
+        style="
+          margin-bottom: 16px;
+          font-size: 16px;
+          font-weight: 600;
+          text-align: center;
+        "
+      >
+        Gəlin birlikdə dəyişək.<br />Gəlin ümid olaq.<br />Gəlin göstərək ki,
+        sevgi və diqqət hər kəsə çatır.
+      </p>
+      <div style="text-align: center; margin-top: 12px">
+        <button
+          onclick="document.querySelector('#donationForm button[type=submit]').click();"
+          style="
+            padding: 18px 24px;
+            background: linear-gradient(135deg, #5b8efc, #9dbbff);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+          "
+        >
+          İndi ianə et ❤️
+        </button>
+      </div>
+    </div>
+
+    <footer>© Birlikdə Yaxşılığa — Şəffaflıq və etibarla</footer>
+
+    <script>
+      const form = document.getElementById("donationForm");
+      const amtButtons = document.querySelectorAll(".amt");
+      const purposeButtons = document.querySelectorAll(".purpose-btn");
+      const purposeInput = document.getElementById("purposeInput");
+      const amountInput = document.getElementById("customAmount");
+
+      function selectAmount(value, event) {
+        amountInput.value = value;
+        amtButtons.forEach((b) => b.classList.remove("active"));
+        event.currentTarget.classList.add("active");
+      }
+
+      function selectPurpose(purpose, event) {
+        purposeButtons.forEach((b) => b.classList.remove("active"));
+        event.currentTarget.classList.add("active");
+        purposeInput.value = purpose;
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData,
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            window.location.href = "2.html";
+          })
+          .catch((err) => {
+            console.error(err);
+            alert("Xəta baş verdi, zəhmət olmasa yenidən cəhd edin.");
+          });
+      });
+
+      function shareWhatsApp() {
+        const name =
+          document.getElementById("fullname").value.trim() || "Anonim";
+        const amt = amountInput.value.trim() || "0 AZN";
+        const purpose = purposeInput.value || "Ümumi dəstək";
+        const message = `Mən ${name}, ${amt} ianə etdim. Məqsəd: ${purpose}. Birlikdə Yaxşılığa dəstək ol! ❤️`;
+        const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(
+          message
+        )}`;
+        window.open(whatsappUrl, "_blank");
+      }
+    </script>
+  </body>
+</html>
