@@ -11,10 +11,11 @@
         color: #333;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
         padding: 50px;
       }
+
       h1 {
         color: #ff4500;
         font-size: 3em;
@@ -23,6 +24,7 @@
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         animation: glow 1.5s infinite alternate;
       }
+
       @keyframes glow {
         from {
           text-shadow: 2px 2px 5px rgba(255, 69, 0, 0.6);
@@ -31,6 +33,7 @@
           text-shadow: 2px 2px 15px rgba(255, 69, 0, 1);
         }
       }
+
       p {
         font-size: 1.2em;
         color: #555;
@@ -38,14 +41,14 @@
         max-width: 700px;
         margin-bottom: 30px;
       }
+
       ul {
         list-style-type: none;
         padding: 0;
-        max-height: 600px;
-        overflow-y: auto;
         width: 100%;
         max-width: 700px;
       }
+
       li {
         background: rgba(255, 255, 255, 0.8);
         margin: 8px 0;
@@ -56,11 +59,16 @@
         display: flex;
         justify-content: space-between;
         transition: transform 0.2s, background 0.2s;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
+
       li:hover {
         transform: scale(1.05);
         background: rgba(255, 215, 0, 0.8);
       }
+
       span.amount {
         font-weight: bold;
         color: #ff4500;
