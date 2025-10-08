@@ -277,6 +277,7 @@
         <button type="submit" class="btn">Təsdiqlə</button>
       </form>
 
+      <!-- WhatsApp paylaşımı -->
       <button class="btn whatsapp-btn" onclick="shareWhatsApp()">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
@@ -396,14 +397,12 @@
           });
       });
 
+      // WhatsApp paylaşım funksiyası
       function shareWhatsApp() {
-        const name =
-          document.getElementById("fullname").value.trim() || "Anonim";
-        const amt = amountInput.value.trim() || "0 AZN";
-        const purpose = purposeInput.value || "Ümumi dəstək";
-        const message = `Mən ${name}, ${amt} ianə etdim. Məqsəd: ${purpose}. Birlikdə Yaxşılığa dəstək ol! ❤️`;
+        const message = "Sevgi və diqqət paylaşıram ❤️\n👉 Səndə et ❤️";
+        const url = "https://trumpr.github.io/iane-yardim/";
         const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(
-          message
+          message + "\n" + url
         )}`;
         window.open(whatsappUrl, "_blank");
       }
